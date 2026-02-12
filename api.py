@@ -9,6 +9,9 @@ from scipy.stats import boxcox, yeojohnson
 
 # Initialize FastAPI app
 app = FastAPI(title="Diabetes Prediction API")
+@app.get("/")
+def home():
+    return {"message": "Diabetes ML FastAPI API is running 🚀"}
 
 # Load the pre-trained model and preprocessing tools
 try:
