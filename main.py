@@ -12,6 +12,11 @@ app = FastAPI(
     description="A simple API to predict diabetes based on patient's diagnostic measurements."
 )
 
+@app.get("/")
+def home():
+    return {"message": "Diabetes Prediction API is running 🚀"}
+
+
 # Load the model and preprocessing tools
 try:
     with open('diabetes_prediction_model.pkl', 'rb') as file:
