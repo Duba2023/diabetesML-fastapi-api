@@ -12,7 +12,7 @@ COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy the application code and the trained model
-COPY api.py .
+COPY main.py .
 COPY diabetes_prediction_model.pkl .
 
 # Expose the port that Uvicorn will run on
